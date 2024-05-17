@@ -10,11 +10,14 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     hostname = socket.gethostname()
+    hosting_ip = socket.gethostbyname(hostname)
     requester = request.remote_addr
     context = {
         "hostname": hostname,
-        "requester": requester
+        "hosting_ip": hosting_ip,
+        "requester": requester,
     }
+    print(context)
     return render_template("index.html", context=context)
 
 

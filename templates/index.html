@@ -14,8 +14,10 @@
     <div id="name"> IXT65 </div>
     <div class="plate"></div>
     <div id="information">
-        HOST Machine : "{{ context.hostname }}"
+        HOST Machine : "{{ context.hostname }}"<br>
+        HOST IP : "{{ context.hosting_ip }}"
     </div>
+    <hr>
     <div id="information">
         REQUESTER Machine : "{{ context.requester }}"
     </div>
